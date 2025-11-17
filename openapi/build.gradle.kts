@@ -3,6 +3,7 @@ val logback_version: String by project
 
 plugins {
     kotlin("jvm") version "2.2.21"
+    kotlin("plugin.serialization") version "2.2.21"
     id("io.ktor.plugin") version "3.3.2"
 }
 
@@ -31,9 +32,12 @@ tasks.processResources {
 dependencies {
     implementation(ktorLibs.server.core)
     implementation(ktorLibs.server.openapi)
+    implementation(ktorLibs.server.swagger)
     implementation(ktorLibs.server.contentNegotiation)
     implementation(ktorLibs.serialization.kotlinx.json)
     implementation(ktorLibs.server.auth)
+    implementation(ktorLibs.server.sessions)
+    implementation(ktorLibs.server.cors)
     implementation(ktorLibs.client.core)
     implementation(ktorLibs.client.apache)
     implementation(ktorLibs.server.netty)

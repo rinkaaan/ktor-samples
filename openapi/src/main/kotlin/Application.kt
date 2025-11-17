@@ -9,6 +9,8 @@ fun main(args: Array<String>) {
 fun Application.module() {
     configureOpenApi()
     configureSerialization()
+    configureCors()
     configureSecurity()
+    configureStaticContent()
     configureRouting()
 }

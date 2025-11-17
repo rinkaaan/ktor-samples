@@ -1,0 +1,13 @@
+# Environment variables
+.env
+
+# Build files
+build/
+.gradle/
+.idea/
+*.iml
+docs/
+
+# Kotlin
+.kotlin/
+
